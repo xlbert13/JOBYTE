@@ -1,0 +1,342 @@
+/* Reset de estilos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body.hacker-style {
+  background-image: url("lol.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #0f0;
+  font-family: "Courier New", monospace;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #0f0;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.banner {
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+  border-bottom: 5px solid white;
+}
+
+.banner .overlay-text {
+  position: absolute;
+  top: 60%; /* Ajusta el valor según tus necesidades */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #0f0;
+  font-size: 70px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: hackerAnimation 5s linear infinite;
+}
+
+@keyframes hackerAnimation {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px; /* Ajusta este valor para cambiar la separación entre las cartas */
+}
+
+.card {
+  width: calc(
+    33.33% - 10px
+  ); /* Ajusta este valor para cambiar el ancho de las cartas */
+  margin-bottom: 20px;
+  background-color: #111;
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card img {
+  width: 100%;
+  height: 200px; /* Ajusta este valor para cambiar la altura de las imágenes */
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  margin-bottom: 10px;
+}
+
+.card a {
+  color: #0f0;
+  text-decoration: none;
+}
+
+.card .back {
+  display: none;
+  background-color: #000;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.card.flipped .back {
+  display: block;
+}
+
+.card.flipped .front {
+  display: none;
+}
+
+.card .read-more {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0f0;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.card .read-more:hover {
+  background-color: #000;
+  color: #0f0;
+}
+
+aside {
+  margin-bottom: 40px;
+  align-items: center;
+
+  padding: 40px;
+  max-width: 100%;
+}
+
+aside h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #0f0;
+}
+
+aside ul {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+aside ul li {
+  margin-bottom: 10px;
+  color: #0f0;
+}
+
+footer {
+  background-color: #000;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  color: #0f0;
+  margin-bottom: 10px;
+}
+
+.social-media-icons {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.social-media-icons li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-media-icons li a img {
+  width: 20px;
+  height: 20px;
+}
+
+.about-me {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  text-align: center;
+  color: #0f0;
+}
+
+.about-me h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.about-me p {
+  margin-bottom: 20px;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0f0;
+  color: #000;
+  text-decoration: none;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.button:hover {
+  background-color: #000;
+  color: #0f0;
+}
+
+/* Estilos iniciales del menú */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  z-index: 1000;
+  transition: top 0.3s;
+}
+
+/* Estilos cuando se desliza hacia abajo */
+header.scroll-down {
+  top: -100px;
+}
+
+/* Estilos para el formulario de contacto */
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: transparent;
+  border: 1px solid #0f0;
+  color: #0f0;
+  font-family: "Courier New", monospace;
+}
+
+.contact-form textarea {
+  height: 100px;
+}
+
+.contact-form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #0f0;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  font-family: "Courier New", monospace;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #00ff00;
+}
+
+.contact-form ::placeholder {
+  color: #0f0;
+  opacity: 0.7;
+}
+
+/* Estilos para la sección de registro */
+#register-section {
+  display: none;
+}
+
+#register-section h2 {
+  text-align: center;
+}
+
+#register-section form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#register-section input[type="text"],
+#register-section input[type="email"],
+#register-section input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+
+#register-section button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#register-section button[type="submit"]:hover {
+  background-color: #555;
+}
